@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Школа репетиторства</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="container">
+		<nav class="nav">
+			<div class="nav__logo">
+				<img src="logo.svg">
+			</div>
+			<div class="nav__menu">
+				<ul class="nav__links">
+					<li class="link"><a href="#about-us">Про нас</a></li>
+					<li class="link"><a href="#directions">Напрямки</a></li>
+					<li class="link"><a href="#price">Вартість</a></li>
+					<li class="link"><a href="#contacts">Контакти</a></li>
+				</ul>
+				<div class="btn__container">
+					<button class="btn" id="loginBtn">Увійти</button>
+					<button class="btn" id="registerBtn">Зареєструватись</button>
+				</div>
+
+				<div id="registerForm" class="form__container" style="display: none;">
+
+				    <form id="registrationForm">
+				      <label for="name">Ім'я та прізвище:</label>
+				      <input type="text" id="name" name="name" required>
+
+				      <label for="phone">Номер телефону:</label>
+				      <input type="text" id="phone" name="phone" required>
+
+				      <label for="email">Email:</label>
+				      <input type="email" id="email" name="email" required>
+
+				      <label for="password">Пароль:</label>
+				      <input type="tel" id="password" name="password" required>
+
+				      <input type="submit" value="Зареєструватись" id="registerBtn">
+				    </form>
+  				</div>
+			</div>
+
+			<script>
+			    document.addEventListener("DOMContentLoaded", function() {
+			      const registerBtn = document.getElementById("registerBtn");
+			      const registerForm = document.getElementById("registerForm");
+
+			      registerBtn.addEventListener("click", function() {
+			        registerForm.style.display = "block";
+			      });
+
+			      window.addEventListener("click", function(event) {
+			        if (event.target === registerForm) {
+			          registerForm.style.display = "none";
+			        }
+			      });
+			    });
+			  </script>
+
+			<div class="hamburger-menu">
+			  <input id="menu__toggle" type="checkbox" />
+			  <label class="menu__btn" for="menu__toggle">
+			    <span></span>
+			  </label>
+			  <ul class="menu__box">
+			    <li><a class="menu__item" href="#about-us" onclick="reloadPage()">Про нас</a></li>
+			    <li><a class="menu__item" href="#directions" onclick="reloadPage()">Напрямки</a></li>
+			    <li><a class="menu__item" href="#price" onclick="reloadPage()">Вартість</a></li>
+			    <li><a class="menu__item" href="#contacts" onclick="reloadPage()">Контакти</a></li>
+			    <button class="menu__item btn">Увійти</button>
+				<button class="menu__item btn">Зареєструватись</button>
+			  </ul>
+			</div>
+		</div>
+		</nav>
+	</div>
+
+	<section class="header">
+		<div class="container">
+			<div class="header__content">
+	    		<span class="bg-blur header-blur"></span>
+	    		<h1 class="header__title">Школа репетиторства</h1>
+	    		<p class="centered-text">Великий вибір предметів та репетиторів який підійде саме вам.Отримайте індивідуальний підхід та гнучкий графік навчання. Приєднуйтеся до нас сьогодні та відкрийте двері до успіху!
+	    		</p>
+	    		<button class="big-btn">Обрати курс</button>
+	    	</div>
+	    	<div class="bg-dark"></div>
+    	</div>
+	</section>
+    
+	<div id="about-us" class="about-us">
+		<div class="container">
+			<div class="bg-video">
+				<video src="video.mp4" autoplay loop muted></video>
+			</div>
+			<h2>Про нас</h2>
+			<p class="about-us__text">Наша школа репетиторства - це місце, де кожен учень може знайти індивідуальний підхід до навчання та досягти своїх навчальних цілей. Ми пропонуємо широкий спектр послуг, включаючи індивідуальні та групові заняття з різних предметів для учнів будь-якого рівня підготовки.</p>
+			<p class="about-us__text">Наші викладачі - це висококваліфіковані спеціалісти з багаторічним досвідом роботи, які вміють ефективно пояснити складні матеріали та підтримати учнів у їх навчальному процесі.</p>
+			<p class="about-us__text">Ми розуміємо важливість гнучкості та персоналізації у навчанні, тому пропонуємо різні пакети навчання, що відповідають потребам кожного учня.</p>
+			<p class="about-us__text">Наша мета - не лише допомогти учням отримати високі бали та успішно скласти іспити, а й підготувати їх до майбутніх викликів та досягнень у житті.</p>
+			<div class="bg-dark"></div>
+		</div>
+	</div>
+
+	<section id="directions" class="directions">
+		<div class="container">
+			<h2>Напрямки</h2>
+			<div class="directions__menu">
+			    <div class="directions__block">
+				    <p class="block__title">Англійська мова</p>
+				    <button class="block__btn">Обрати рипетитора</button>
+			    </div>
+			    <div class="directions__block">
+				     <p class="block__title">Математика</p>
+				     <button class="block__btn">Обрати рипетитора</button>
+			    </div>
+			    <div class="directions__block">
+				     <p class="block__title">Українська мова</p>
+				     <button class="block__btn">Обрати рипетитора</button>
+			    </div>
+			    <div class="directions__block">
+				     <p class="block__title">Фізика</p>
+				     <button class="block__btn">Обрати рипетитора</button>
+			    </div>
+			    <div class="directions__block">
+				     <p class="block__title">Хімія</p>
+				     <button class="block__btn">Обрати рипетитора</button>
+			    </div>
+			    <div class="directions__block">
+				     <p class="block__title">Історія України</p>
+				     <button class="block__btn">Обрати рипетитора</button>
+			    </div>
+			</div>
+		</div>
+	</section>
+
+    <section id="price" class="price">
+    	<div class="container">
+	    	<h2>Вартість</h2>
+	    	<div class="price__grid">
+	    		<div class="price__card">
+	    			<div class="price__card__content">
+	    				<h4 class="header__price">1 місяць</h4>
+	    				<p>
+	    				    <i class="ri-check-line"></i>
+	    				    8 занять
+	    				</p>
+	    				<p>
+	    				    <i class="ri-check-line"></i>
+	    				    гнучкий графік
+	    				</p>
+	    				<p>
+	    				    <i class="ri-check-line"></i>
+	    				    швидкі результати
+	    				</p>
+	    			</div>
+	    			<button class="price__btn">3000 грн</button>
+	    		</div>
+	    		<div class="price__card">
+	    			<div class="price__card__content">
+	    				<h4 class="header__price">3 місяць</h4>
+	    				<p>
+	    				    <i class="ri-check-line"></i>
+	    				    25 занять
+	    				</p>
+	    				<p>
+	    				    <i class="ri-check-line"></i>
+	    				    ефективність у вивченні
+	    				</p>
+	    				<p>
+	    				    <i class="ri-check-line"></i>
+	    				    економія часу
+	    				</p>
+	    			</div>
+	    			<button class="price__btn">8000 грн</button>
+	    		</div>
+	    		<div class="price__card">
+	    			<div class="price__card__content">
+	    				<h4 class="header__price">Пів року</h4>
+	    				<p>
+	    				    <i class="ri-check-line"></i>
+	    				    50 занять
+	    				</p>
+	    				<p>
+	    				    <i class="ri-check-line"></i>
+	    				    економія грошей
+	    				</p>
+	    				<p>
+	    				    <i class="ri-check-line"></i>
+	    				    глибоке вивчення матеріалу
+	    				</p>
+	    			</div>
+	    			<button class="price__btn">15000 грн</button>
+	    		</div>
+	    	</div>
+	    	<div class="bg-dark"></div>
+	    </div>
+    </section>
+
+    <div id="contacts" class="container">
+	    <footer class="footer">
+	    	<div class="footer__first-block">
+	    		<p class="footer__link link"><a href="#">Про нас</a></p>
+				<p class="footer__link link"><a href="#">Напрямки</a></p>
+				<p class="footer__link link"><a href="#">Вартість</a></p>
+				<p class="footer__link link"><a href="#">Контакти</a></p>
+	    	</div>
+	    	<div class="footer__second-block">
+	    		<div class="footer-logo">
+	    		    <img src="logo.svg">
+	    		</div>
+	    		<div class="social-media">
+	    		    <div class="social-media__item">
+	    			    <img src="instagram-icon.svg">
+	    		    </div>
+	    		    <div class="social-media__item">
+	    			    <img src="telegram-icon.svg">
+	    		    </div>
+	    		    <div class="social-media__item">
+	    			    <img src="linkedin_social_media.svg">
+	    		    </div>
+	    		</div>
+	    	</div>
+	    	<div class="footer__third-block">
+			    <h4 class="text-contacts">Контакти</h4>
+			    <div class="phone">
+					<img src="phone-telephone.svg">
+				    <p class="phone-number">+380689202094</p>
+		        </div>
+	    		<p class="adress">вул., Стрийська 113Д</p>
+	    		<p class="post">tutorschoolukraine@gmail.com</p>
+	    	</div>
+		</footer>
+	</div>
+
+	<script>
+	  function reloadPage() {
+	    location.reload();
+	  }
+	</script>
+</body>
+</html>
